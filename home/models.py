@@ -33,9 +33,19 @@ class Testimonial(models.Model):
         return self.name
 
 
-class Skill(models.Model):
+class Design_Skill(models.Model):
     name=models.CharField(max_length=300)
     level=models.IntegerField()
+    color=models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name
+
+
+class Coding_Skill(models.Model):
+    name=models.CharField(max_length=300)
+    level=models.IntegerField()
+    color=models.CharField(max_length=300)
 
     def __str__(self):
         return self.name
