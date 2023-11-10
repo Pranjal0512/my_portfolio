@@ -246,58 +246,26 @@
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row gy-5 gx-4">
+                                {% for experience in experiences %}
                                 <div class="col-sm-6">
-                                    <h5>UI Designer</h5>
+                                    <h5>{{experience.name}}</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
+                                    <p class="text-primary mb-1">{{experience.starting_year}} - {{experience.ending_year}}</p>
+                                    <h6 class="mb-0">{{experience.university}}</h6>
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5>Product Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Web Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Apps Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                         <div id="tab-2" class="tab-pane fade show p-0">
                             <div class="row gy-5 gx-4">
+                                {% for education in educations %}
                                 <div class="col-sm-6">
-                                    <h5>UI Design Course</h5>
+                                    <h5>{{education.name}}</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
+                                    <p class="text-primary mb-1">{{education.starting_year}} - {{education.ending_year}}</p>
+                                    <h6 class="mb-0">{{education.university}}</h6>
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5>IOS Development</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Web Design</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Apps Design</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -316,94 +284,24 @@
                     <h1 class="display-5 mb-0">My Services</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Hire Me</a>
+                    <a class="btn btn-primary py-3 px-5" href="https://www.linkedin.com/in/pranjal-barnwal-7684ba259/">Hire Me</a>
                 </div>
             </div>
             <div class="row g-4">
+                {% for service in services %}
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
                         <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                            <i class="fa {{service.logo}} fa-2x text-dark"></i>
                         </div>
                         <div class="ms-sm-4">
-                            <h4 class="mb-3">Creative Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                            <h4 class="mb-3">{{service.title}}</h4>
+<!--                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>-->
+                            <span>{{service.description}}</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-code-branch fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">Graphic Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">Web Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">UI/UX Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">UI/UX Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">UI/UX Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                        <div class="bg-icon flex-shrink-0 mb-3">
-                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
-                        </div>
-                        <div class="ms-sm-4">
-                            <h4 class="mb-3">UI/UX Design</h4>
-                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
-                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -537,7 +435,7 @@
 <!--            </div>-->
 <!--        </div>-->
 <!--    </div>-->
-    <!-- Team End -->
+<!-- Team End ----->
 
 
     <!-- Testimonial Start -->
@@ -547,56 +445,35 @@
             <div class="row justify-content-center">
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="testimonial-left h-100">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                        {% for testimonial in testimonials %}
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="{{testimonial.image}}" alt="">
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="owl-carousel testimonial-carousel">
+                        {% for testimonial in testimonials %}
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="{{testimonial.image}}" alt="">
                                 <div class="testimonial-icon">
                                     <i class="fa fa-quote-left text-primary"></i>
                                 </div>
                             </div>
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <p class="fs-5 fst-italic">{{testimonial.description}}</p>
                             <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
+                            <h5>{{testimonial.name}}</h5>
+                            <span>{{testimonial.post}}</span>
                         </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="">
-                                <div class="testimonial-icon">
-                                    <i class="fa fa-quote-left text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="">
-                                <div class="testimonial-icon">
-                                    <i class="fa fa-quote-left text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
-                        </div>
+                        {% endfor %}
+
                     </div>
                 </div>
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="testimonial-right h-100">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                        {% for testimonial in testimonials %}
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="{{testimonial.image}}" alt="">
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -613,19 +490,20 @@
                     <h1 class="display-5 mb-0">Let's Work Together</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Say Hello</a>
+                    <a class="btn btn-primary py-3 px-5" href="https://www.facebook.com/pranjal.barnwal.39">Say Hello</a>
                 </div>
             </div>
             <div class="row g-5">
+                {% for information in informations %}
                 <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="mb-2">My office:</p>
-                    <h3 class="fw-bold">Kathmandu,Nepal</h3>
+                    <h3 class="fw-bold">{{information.address}}</h3>
                     <hr class="w-100">
                     <p class="mb-2">Call me:</p>
-                    <h3 class="fw-bold">+977 9811857755</h3>
+                    <h3 class="fw-bold">{{information.phone}}</h3>
                     <hr class="w-100">
                     <p class="mb-2">Mail me:</p>
-                    <h3 class="fw-bold">pranjal.barnwal0512342gmail.com</h3>
+                    <h3 class="fw-bold">{{information.email}}</h3>
                     <hr class="w-100">
                     <p class="mb-2">Follow me:</p>
                     <div class="d-flex pt-2">
@@ -635,6 +513,7 @@
                         <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/pranjal-barnwal-7684ba259/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
+                {% endfor %}
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
                     <form>

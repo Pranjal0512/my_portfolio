@@ -25,8 +25,8 @@ class Service(models.Model):
 class Testimonial(models.Model):
     image = models.TextField()
     name = models.CharField(max_length=300)
-    Post = models.CharField(max_length=300)
-    Description = models.TextField()
+    post = models.CharField(max_length=300)
+    description = models.TextField()
 
 
     def __str__(self):
@@ -65,7 +65,7 @@ class Experience(models.Model):
 class Information(models.Model):
     address= models.CharField(max_length=400)
     phone= models.IntegerField()
-    email= models.EmailField(max_length=15)
+    email= models.EmailField(max_length=300)
     def __str__(self):
         return self.address
 
