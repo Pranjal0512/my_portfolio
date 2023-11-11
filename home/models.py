@@ -80,5 +80,18 @@ class Information(models.Model):
         return self.address
 
 
+INDEX = (('first','first'),('second','second'),('third','third'),('fourth','fourth'))
+class Project(models.Model):
+    slug = models.CharField(max_length=500, unique=True)
+    item_no = models.CharField( choices= INDEX, max_length=300)
+    image = models.ImageField(upload_to='img')
+    drive= models.TextField()
+
+    def __str__(self):
+        return self.slug
+
+
+
+
 
 

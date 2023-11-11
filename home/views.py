@@ -12,6 +12,7 @@ def home(request):
     views['educations']= Education.objects.all()
     views['experiences']= Experience.objects.all()
     views['informations']= Information.objects.all()
+    views['projects']= Project.objects.all()
     if request.method == "POST":
         name = request.POST["name"]
         email = request.POST["email"]

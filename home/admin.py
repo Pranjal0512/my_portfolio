@@ -10,6 +10,7 @@ admin.site.register(Coding_Skill)
 admin.site.register(Education)
 admin.site.register(Experience)
 admin.site.register(Information)
+admin.site.register(Project)
 
 
 
